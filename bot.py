@@ -8,10 +8,12 @@ def greet_user(update, context):
     print('Вызван /start')
     update.message.reply_text('Привет, пользователь! Ты вызвал команду /start')
 
+
 def talk_to_me(update, context):
     user_text = update.message.text 
     print(user_text)
     update.message.reply_text(user_text)
+
 
 def main():
     mybot = Updater(settings.API_KEY, use_context=True)
